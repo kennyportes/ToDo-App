@@ -1,0 +1,2 @@
+As a user, 
+I want to click a "Remove" or "X" button on a task so that it is permanently deleted from my list.

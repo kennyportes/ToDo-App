@@ -1,0 +1,3 @@
+As a user,
+I want to type a task into an input field and click "Add" button so that I can see it added to my list 
+immediately.

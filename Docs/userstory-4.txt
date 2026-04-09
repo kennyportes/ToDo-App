@@ -1,0 +1,3 @@
+As a user, 
+I want to toggle between "All," "Completed," and "Incomplete" views so that I can focus on specific 
+types of tasks without cluttering my screen.
