@@ -1,11 +1,13 @@
 import { useState } from "react";
+import TaskForm from "../components/TaskForm";
 
 function Tasks() {
     const [tasks, setTasks] = useState([]);
     const [filter, setFilter] = useState("all");
 
     function addTask(text) {
-        setTasks([...tasks, { id: Date.now(), text, complete: false }]);
+        const newTask = { id: Date.now(), text, completed: false };
+        setTasks([...tasks, newTask]);
     }
 
     function deleteTask(id) {
@@ -22,13 +24,15 @@ function Tasks() {
     const filteredTasks = tasks.filter((task) => {
         if (filter === "completed") return task.completed;
         if (filter === "active") return !task.completed;
-        return true; // "all"
+        return true; 
     });
 
     return (
         <div>
 
-            <button onClick={() => addTask(prompt("Enter task:"))}>Add Task</button>
+            <div>
+          <TaskForm onAddTask={addTask} />
+           </div>
 
             <div>
                 <br />
