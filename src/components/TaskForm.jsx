@@ -19,7 +19,7 @@ function TaskForm({ onAddTask }) {
         value={text} 
         onChange={(e) => setText(e.target.value)}
       />
-      <button type="submit" class="btn btn-primary">Add Task</button>
+      <button type="submit" className="btn btn-primary">Add Task</button>
     </form>
   );
 
