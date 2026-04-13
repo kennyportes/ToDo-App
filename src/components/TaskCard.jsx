@@ -1,4 +1,4 @@
-function TaskCategories({ task, toggleTask, deleteTask }) {
+function TaskCard({ task, toggleTask, deleteTask }) {
   return (
     <div 
       className={`card w-50 mx-auto p-3 my-2 d-flex flex-row justify-content-between align-items-center shadow-sm  ${
@@ -30,4 +30,4 @@ function TaskCategories({ task, toggleTask, deleteTask }) {
   );
 }
 
-export default TaskCategories;
+export default TaskCard;

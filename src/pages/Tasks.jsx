@@ -1,6 +1,6 @@
 import { useState } from "react";
 import TaskForm from "../components/TaskForm";
-import TaskCategories from "../components/TaskCategories";
+import TaskCard from "../components/TaskCard";
 
 function Tasks() {
     const [tasks, setTasks] = useState([]);
@@ -35,6 +35,7 @@ function Tasks() {
                 <TaskForm onAddTask={addTask} />
             </div>
             <div>
+                <br />
                 <h2>Task List</h2>
 
                 <div>
@@ -45,7 +46,7 @@ function Tasks() {
                 </div>
 
                 {filteredTasks.map(task => (
-          <TaskCategories
+          <TaskCard
             key={task.id} 
             task={task}
             toggleTask={toggleTask}
