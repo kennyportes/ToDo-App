@@ -5,8 +5,6 @@ function TaskForm({ onAddTask }) {
 
   const handleSubmit = (e) => {
     e.preventDefault(); 
-    
-
     onAddTask(text); 
     setText(""); 
   };

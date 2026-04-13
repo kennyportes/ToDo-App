@@ -24,15 +24,15 @@ function Tasks() {
     const filteredTasks = tasks.filter((task) => {
         if (filter === "completed") return task.completed;
         if (filter === "active") return !task.completed;
-        return true; 
+        return true;
     });
 
     return (
         <div>
 
             <div>
-          <TaskForm onAddTask={addTask} />
-           </div>
+                <TaskForm onAddTask={addTask} />
+            </div>
 
             <div>
                 <br />
@@ -58,10 +58,5 @@ function Tasks() {
         </div>
     );
 }
-
-
-
-
-
 
 export default Tasks;
