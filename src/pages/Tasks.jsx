@@ -1,5 +1,6 @@
 import { useState } from "react";
 import TaskForm from "../components/TaskForm";
+import TaskCategories from "../components/TaskCategories";
 
 function Tasks() {
     const [tasks, setTasks] = useState([]);
@@ -33,28 +34,25 @@ function Tasks() {
             <div>
                 <TaskForm onAddTask={addTask} />
             </div>
-
             <div>
-                <br />
                 <h2>Task List</h2>
-                <button onClick={() => setFilter("all")}>All</button>
-                <button onClick={() => setFilter("active")}>Active</button>
-                <button onClick={() => setFilter("completed")}>Completed</button>
-            </div>
 
-            <ul>
-                {filteredTasks.map((task) => (
-                    <li key={task.id}>
-                        <span
-                            style={{ textDecoration: task.completed ? "line-through" : "none" }}
-                            onClick={() => toggleTask(task.id)}
-                        >
-                            {task.text}
-                        </span>
-                        <button onClick={() => deleteTask(task.id)}>x</button>
-                    </li>
-                ))}
-            </ul>
+                <div>
+                    <br />
+                    <button onClick={() => setFilter("all")}>All</button>
+                    <button onClick={() => setFilter("active")}>Active</button>
+                    <button onClick={() => setFilter("completed")}>Completed</button>
+                </div>
+
+                {filteredTasks.map(task => (
+          <TaskCategories
+            key={task.id} 
+            task={task}
+            toggleTask={toggleTask}
+            deleteTask={deleteTask}
+          />
+        ))}
+            </div>
         </div>
     );
 }
