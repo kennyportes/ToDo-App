@@ -1,10 +1,12 @@
 import { useState } from "react";
 
 function Contact() {
-    return(
-        <>
-        </>
-    )
+   const [form, setForm] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    comment: "",
+   });
 
 }
 
